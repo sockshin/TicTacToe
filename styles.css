@@ -1,0 +1,219 @@
+*, *::before, *::after { 
+    box-sizing:border-box;
+    margin:0px;
+    padding: 0px;}
+
+    :root {
+        --highlight: #ff6600;
+        --darkbg: #4e4e4e;
+        --cell: rgb(56, 56, 56);
+        --font:rgb(0, 238, 255);
+        --lightbg:  #bbbbbb;
+      }
+      
+
+html{
+        font-family: 'Roboto', sans-serif;
+        background-color:var(--lightbg);
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    min-height: 100vh;
+    justify-content: space-between;
+
+    }
+
+.header{
+    color: white;
+    background-color:var(--darkbg);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.tic-tac-toe-board{
+    display: grid;
+    grid-template: repeat(3, 80px) / repeat(3, 80px);
+    gap: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    border: 10px solid var(--highlight);
+    background-color: #4e4e4e;
+    margin-left: auto; /* margin auto centers in page */
+    margin-right: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 1px 3px #833400, inset 0px 0px 1px 2px #833400;
+}
+
+.tic-tac-toe-board > .cell, .footer > button{
+    font-size:70px;
+    text-shadow:
+    -3px 0px 1px  #000000,
+    3px 0px 1px  #000000,
+    0px -3px 1px  #000000,
+    0px 3px 1px  #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 238, 255);
+    background-color: var(--cell);
+    border: 5px solid var(--highlight);
+    box-shadow: 0px 0px 1px 1px #ffa56a, inset 0px 0px 1px 1px #ffad73;
+    border-radius: 10px;
+}
+
+.footer, .header, .winner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winner{
+    position: absolute;
+    background-color: var(--darkbg);
+    width: 280px;
+    border-radius: 5px;
+    top: 18%;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.header, .winner{
+    font-size: 1.7rem;
+    color:  var(--font);
+    text-shadow: 
+    -3px 0px 1px  #000000,
+    3px 0px 1px  #000000,
+    0px -3px 1px  #000000,
+    0px 3px 1px  #000000;
+}
+
+
+.header > h1 {
+    min-width: 330px;
+    text-align: center;
+}
+.footer > button {
+    font-size:1.5rem;
+    padding:  10px;
+    margin: 20px 20px;    
+    box-shadow: none;
+    border: none;
+}
+
+
+
+
+
+
+.form-wrapper{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    overflow-x: hidden;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+
+}
+
+
+.form-div {
+    height: 280px;
+    width: 300px;
+    margin: 0px auto;
+    z-index: 1;
+    border: 10px solid var(--highlight);
+    box-shadow: 0px 0px 1px 3px #833400, inset 0px 0px 1px 2px #833400;
+    border-radius: 20px;
+    background-color: var(--darkbg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    visibility:visible;
+    color: var(--font);
+    text-shadow: 
+    -3px 0px 1px  #000000,
+    3px 0px 1px  #000000,
+    0px -3px 1px  #000000,
+    0px 3px 1px  #000000;
+
+  }
+
+  .form-div > button {
+      align-self: flex-end;
+      font-weight: bolder;
+      height: 30px;
+      width: 30px;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 20%;
+      background-color: var(--cell);
+      color: var(--font);
+
+
+  }
+
+  form{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 5px;
+      align-items: center;
+      padding: 5px;
+  }
+
+  form input{
+    color: var(--font);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin:0 15px;
+    padding: 10px 0;
+    background-color: var(--cell);
+    border: 5px solid var(--highlight);
+    border-radius: 10px;;
+    box-shadow: 0px 0px 1px 1px #ffa56a, inset 0px 0px 1px 1px #ffad73;
+}
+
+
+form p{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+form > button{
+    background-color: var(--cell);
+    color: var(--font);
+    border: none;
+    font-weight: bolder;
+    margin: 5px auto;
+
+    padding: 10px;
+    border-radius: 10%;
+    text-shadow: 
+    -3px 0px 1px  #000000,
+    3px 0px 1px  #000000,
+    0px -3px 1px  #000000,
+    0px 3px 1px  #000000;
+
+    
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Tic-Tac-Toe</h1>
+
+        </div>
+        <div class="form-wrapper" id="form_wrapper">
+            <div class="form-div">
+                <button id="x_button">X</button>
+                <form> 
+                    <p>Name Change</p>
+                    <div>
+                        <input type="text" id="user_name" placeholder="O" name="user_name>" autocomplete="off">     
+                    </div> 
+                    <button type="reset" id="submit_button">Submit</button>
+                    <button type="reset" id="switch_names_button">Switch Players</button>
+                </form>
+            </div>
+        </div>
+        <div class="tic-tac-toe-board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="winner"></div>
+        
+        <div class="footer">
+            <button id="reset">Reset Game</button>
+            <button id="change_names">Change Names</button>
+        </div>
+</div>
+    
+</body>
+</html>
+
+<script src="./script.js"> </script>
